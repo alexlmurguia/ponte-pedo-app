@@ -1,0 +1,188 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  text-align: center;
+  margin-top: 2rem;
+  min-height: calc(100% - 6rem);
+}
+.input-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3.5rem;
+  border-radius: 12px;
+  margin: 0 1rem;
+}
+  
+  .input-label {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center; // Alinea los elementos verticalmente en el centro
+    position: relative;
+  }
+  
+  .input-field {
+    flex-grow: 1;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    padding-right: 2.5rem; // Agrega espacio a la derecha para el botón
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: gray;
+    background-color: white;
+    outline: none;
+    max-width: 100%;
+  
+    @media (max-width: 767px) {
+      padding-right: 1.5rem; // Reduce el espacio a la derecha en dispositivos móviles
+    }
+  }
+  
+  .input-field:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    color: #121212;
+  }
+  
+  .add-button {
+    background-color: transparent;
+    color: #121212;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    position: absolute; // Posiciona el botón absolutamente dentro del contenedor
+    right: 0.5rem; // Alinea el botón a la derecha
+    top: 50%; // Centra el botón verticalmente
+    transform: translateY(-50%); // Ajusta el botón para que esté perfectamente centrado
+    transition: color 0.3s;
+
+    &:hover {
+      color: #5f81ff; // Cambia el color del "+" al pasar el cursor sobre el botón
+    }
+  }
+  
+  
+  
+  .player-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    max-width: 500px;
+  }
+  
+  .player-wrapper {
+    display: inline-flex;
+    position: relative;
+  }
+  
+  .player-bubble {
+    padding: 0.5rem 0.5rem;
+    padding-right: 1.8rem; // Agrega un espacio adicional a la derecha para la "X"
+    background-color: white;
+    color: #121212;
+    border-radius: 15px;
+    font-size: 1rem;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .player-delete {
+    position: absolute;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #000;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    
+    &:hover {
+      color: red; // Cambia el color de la "X" a rojo al pasar el mouse
+    }
+  }
+  .start-button {
+    background: transparent;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: 100%;
+    width: 100%; // Asegura que el botón tenga el mismo ancho que el input field
+    margin-top: 1rem; // Añade espacio entre el input field y el botón
+    box-sizing: border-box;
+  }
+  .start-button:hover {
+    filter: brightness(1.1);
+    background-color: rgba(255, 255, 255, 0.1); // Agrega un efecto de fondo al pasar el mouse
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .error-message {
+    color: #ff7878;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .footer {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    
+    .social-icon {
+      width: 30px;
+      height: auto;
+      margin: 0 0.5rem;
+    }
+  }
+  .logo {
+    width: 100%; // Hace que el logo ocupe el 100% del ancho disponible
+    max-width: 400px; 
+  
+    @media (max-width: 767px) {
+      max-width: 85%; // Reduce el ancho máximo en dispositivos móviles
+    }
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }

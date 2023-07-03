@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333; /* Ajusta el color de fondo a tu preferencia */
+  }
+  
+  .logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 120px; /* Ajusta el tamaño del logo a tu preferencia */
+    height: auto;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px; /* Espaciado entre los iconos */
+  }
+  
+  .social-icon {
+    width: 24px; /* Ajusta el tamaño de los iconos a tu preferencia */
+    height: auto;
+  }
+  

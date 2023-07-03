@@ -1,0 +1,170 @@
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+
+  // Añade la media query para dispositivos móviles
+  @media (max-width: 767px) {
+    flex-direction: column; // Alinea las tarjetas verticalmente en dispositivos móviles
+    align-items: center; // Centra las tarjetas horizontalmente en dispositivos móviles
+  }
+}
+
+.card {
+  width: 100%;
+  height: 300px; // Hace las tarjetas más altas
+  max-width: 200px;
+  border-radius: 12px;
+  padding: 2rem;
+  color: black; // Cambia el texto a negro
+  text-align: center;
+  position: relative;
+  transition: 0.3s;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Añade una sombra a las tarjetas
+
+  @media (max-width: 767px) {
+    width: 80%; // Establece el ancho al 80% de la pantalla en dispositivos móviles
+    height: 100px; // Reduce la altura en dispositivos móviles
+    text-align: left;
+    max-width: none; 
+  }
+}
+.card:hover {
+  transform: scale(1.05); // Aumenta el tamaño de la tarjeta al pasar el cursor sobre ella
+  cursor: pointer;
+  z-index: 1; // Asegura que la tarjeta se muestre en primer plano
+}
+
+.card-1 {
+  background-color: #D0F36F;
+}
+
+.card-2 {
+  background-color: #d7d7d7;
+}
+
+.card-3 {
+  background-color: #f77272;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin: 0.75rem 0;
+  white-space: nowrap; // Asegura que el título se mantenga en una sola línea
+  overflow: hidden; // Oculta el contenido que exceda el ancho disponible
+  text-overflow: ellipsis; // Agrega puntos suspensivos al final si el contenido excede el ancho disponible
+
+  @media (max-width: 767px) {
+    margin-top: 0.25rem; // Reduce el margen superior en dispositivos móviles
+    margin-bottom: 0.25rem;
+  }
+}
+
+.card-description {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 767px) {
+    margin-top: 0.25rem; // Elimina el margen inferior en dispositivos móviles
+  }
+}
+
+.card-instruction {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0rem;
+}
+
+@media (min-width: 768px) {
+  .card-instruction {
+    margin-top: 1rem; // Añade un margen superior en pantallas más grandes que 767px
+  }
+}
+  
+
+.card-button {
+  position: absolute; // Posiciona el botón absolutamente dentro de la tarjeta
+  bottom: 1rem; // Alinea el botón con la parte inferior de la tarjeta
+  left: 1rem; // Añade margen a la izquierda
+  right: 1rem; // Añade margen a la derecha
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  transition: 0.3s;
+  width: calc(100% - 2rem); // Asegura que el botón tenga el mismo ancho que la tarjeta menos los márgenes
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: 767px) {
+    display: none; // Oculta el botón en dispositivos móviles
+  }
+}
+
+.horizontal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px black;
+  margin-top: 2rem;
+  max-width: 100%;
+  overflow-x: auto;
+
+  .card-title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.team-list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.invisible-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

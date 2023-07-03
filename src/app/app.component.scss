@@ -1,0 +1,60 @@
+$black: rgb(18,18,18);
+
+:host {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: $black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(255, 255, 255);
+  outline: none;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+html,body {
+  margin: 0 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}

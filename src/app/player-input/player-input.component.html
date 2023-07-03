@@ -1,0 +1,37 @@
+  <!-- <h1 class="title">Ponte Pedo🤙</h1> -->
+  <div class="logo-container">
+    <img src="assets/LogoBlancoIzq.png" alt="Logo" class="social-icon logo">
+  </div>
+  <div class="input-container">
+    <label *ngIf="players.length <= 3" for="player-name" class="input-label">¿Quién va a jugar?</label>
+    <label *ngIf="players.length > 3" for="player-name" class="input-label">Esto se va a poner bueno!</label>
+      <form class="input-group" (ngSubmit)="addPlayer()">
+        <input
+          type="text"
+          id="player-name"
+          class="input-field"
+          [(ngModel)]="playerName"
+          placeholder="Nombre"
+          name="playerName"
+          (keydown.enter)="addPlayer()"
+        />
+        <button class="add-button" type="submit">&#43;</button>
+      </form>
+      <div class="player-bubbles">
+        <div *ngFor="let player of players" class="player-wrapper">
+          <span class="player-bubble">{{ player }}</span>
+          <span class="player-delete" (click)="removePlayer(player)">&times;</span>
+        </div>
+      </div>      
+      <button class="start-button" (click)="startGame()">Comenzar a tomar</button>
+      <p class="error-message" *ngIf="showErrorMessage">Agrega mínimo a un jugador para empezar a tomar🥴</p>
+  </div>
+
+  <div class="footer">
+  <a href="https://www.instagram.com/pontepedoclub/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/instagram2.png" alt="Instagram" class="social-icon">
+  </a>
+  <a href="https://www.tiktok.com/@pontepedoclub" target="_blank" rel="noopener noreferrer">
+    <img src="assets/tiktok2.png" alt="TikTok" class="social-icon">
+  </a>
+</div>

@@ -1,0 +1,40 @@
+<button class="back-button" (click)="goBack()" [ngStyle]="{'color': 'black'}">&#x2190;</button>
+<button class="invisible-button" (click)="toggleCard3Visibility()"></button>
+<div class="content">
+    <h2>Elige un modo</h2>
+  
+    <div class="card-container"> 
+      <div class="card card-1" (click)="startSelectedMode()">
+        <div class="card-text">
+          <h3 class="card-title">Pre 🍻</h3>
+          <p class="card-description">Para ir comenzando</p>
+          <p class="card-instruction">Ej: Termina la frase, la menos original toma un shot. En la peda...</p>
+        </div>
+        <button class="card-button" (click)="startSelectedMode()">Jugar</button>
+      </div>
+
+      <div class="card card-3" *ngIf="isCard3Visible" (click)="startModeHot()">
+          <div class="card-text">
+            <h3 class="card-title">Hot 🥵</h3>
+            <p class="card-description">Para calentar el pedo</p>
+            <p class="card-instruction">Ej: Gus besa a adlemy intensamente, los demás califican el beso.</p>
+          </div>
+          <button class="card-button" (click)="startModeHot()">Jugar</button>
+      </div>
+  
+      <div class="card card-2" (click)="openInstagram()">
+        <div class="card-text">
+          <h3 class="card-title">Próximamente 👀</h3>
+          <p class="card-description">Vota por el siguiente modo en @pontepedoclub</p>
+        </div>
+        <button class="card-button" (click)="openInstagram()">Entérate antes</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="horizontal-card">
+    <h3 class="card-title">El team</h3>
+    <ul class="team-list-horizontal">
+      <li *ngFor="let player of players">{{ player }} {{ getPlayerEmoji(player) }}</li>
+    </ul>
+  </div>

@@ -1,0 +1,11 @@
+<div class="game-container">
+<div (keydown)="onKeyDown($event)" (click)="onScreenClick()">
+  <button class="back-button" (click)="goBack(); $event.stopPropagation()" [ngStyle]="{'color': contrastColor}">&#x2190;</button>
+  <div class="app-game">
+    <div class="phrase-container">
+      <p class="phrase">{{ currentPhrase }}</p>
+    </div>
+    <button class="next-button" (click)="nextPhrase()">Siguiente</button>
+  </div>
+</div>
+</div>

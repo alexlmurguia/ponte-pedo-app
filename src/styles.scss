@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #F4F3F3;
+  }
+
+  body {
+    &.animated-background {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+  
+    &.animated-background::before {
+      content: "";
+      background: radial-gradient(circle at center, #70D6FF, #80b1ff);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      animation: hue-rotation 80s infinite;
+    }
+  
+    &.animated-background::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes hue-rotation {
+    0%, 100% {
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  

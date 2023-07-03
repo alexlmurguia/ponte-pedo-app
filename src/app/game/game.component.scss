@@ -1,0 +1,98 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  :host {
+    width: 80%; // Aumenta el ancho del cuadro en dispositivos móviles
+  }
+}
+
+@media (max-width: 767px) {
+  .game-container {
+    height: 100vh; // Altura al 100% de la pantalla
+    overflow: hidden; // Evitar el desplazamiento (scroll)
+  }
+}
+
+.app-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .app-game {
+    height: 100vh;
+  }
+}
+
+.phrase-container {
+  display: flex; // Añade flexbox al contenedor de la frase
+  flex-direction: column; // Alinea los elementos en una columna
+  align-items: flex-start; // Alinea el texto y el botón horizontalmente a la izquierda
+  justify-content: center;
+  width: 100%;
+}
+
+.phrase {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem; // Añade un margen debajo del texto
+}
+
+.next-button {
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+}
+
+  .white-text {
+    color: #FFFFFF;
+  }
+  
+  .black-text {
+    color: #121212;
+  }
+  
+  .white-border {
+    border-color: #FFFFFF;
+  }
+  
+  .black-border {
+    border-color: #121212;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+  
+    &:hover {
+      color: #ffffff;
+    }
+  }
